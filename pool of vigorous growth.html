@@ -1,0 +1,22 @@
+<html>
+<P>
+ENTER A MANA VALUE:
+</P>
+<input type="number" id="mv" name="manavalue">
+<p>
+</p>
+<button onClick="vG()">
+VIGOROUSLY GROW
+</button>
+<script>
+function vG(){
+  let mv_number = document.getElementById('mv')
+  let mvcard = mv_number.value.toString();
+  let link1 = "https://api.scryfall.com/cards/random?format=image&version=normal&q=mv%3d";
+  let link2 ="t%3Acreature";
+  let temp = link1+mvcard+link2;
+  console.log("redirecting");
+  window.location.href = temp;
+}
+</script>
+</html>
